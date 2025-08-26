@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Modern</title>
+  <style>
+    /* ==== Global Style ==== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2, #ff6a88);
+      background-size: 300% 300%;
+      animation: gradientBG 10s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==== Header ==== */
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+    }
+    .header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+    .header img:hover {
+      transform: scale(1.1);
+    }
+    .header h1 {
+      margin: 10px 0;
+      font-size: 28px;
+    }
+    .header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* ==== Content ==== */
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      padding: 30px;
+    }
+    .card {
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .card h2 {
+      margin-top: 0;
+      border-left: 5px solid #667eea;
+      padding-left: 10px;
+      color: #444;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul li {
+      padding: 7px 0;
+      font-size: 15px;
+    }
+    a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #ff6a88;
+    }
+
+    /* ==== Footer ==== */
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      font-size: 14px;
+    }
+
+    /* ==== Responsive ==== */
+    @media(max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="header">
+      <img src="IMG_20250825_203421.jpg" alt="Foto Profil">
+      <h1>Ruuv</h1>
+      <p>Siswa | Programmer Magang | Masih Belajar</p>
+    </div>
+
+    <div class="content">
+      <div class="card">
+        <h2>Data Pribadi</h2>
+        <ul>
+          <li><b>Nama:</b> Ruuv</li>
+          <li><b>Tanggal Lahir:</b> 22 Oktober 2008</li>
+          <li><b>Alamat:</b> Jawa Timur, Indonesia</li>
+          <li><b>Hobi:</b> Membaca, Coding, Musik, Main Game</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Sosial Media</h2>
+        <ul>
+          <li><b>Instagram:</b> <a href="https://instagram.com/_rufytok" target="_blank">@_rufytok</a></li>
+          <li><b>Facebook:</b> <a href="https://facebook.com/Rufy Syahputra" target="_blank">Rufy Syahputra</a></li>    
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Riwayat Sekolah</h2>
+        <ul>
+          <li>SD Margo Basuki 01 (2013 - 2020)</li>
+          <li>SMPN 3 Malang(2020 - 2024)</li>
+          <li>SMKN 4 Malang (2024 - 2027)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Keterampilan</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Python & Java</li>
+          <li>Desain UI/UX</li>
+          <li>Editing Musik</li>
+        </ul>
+      </div>
+    </div>
+
+
+<script>
+  function startGame() {
+    let angka = Math.floor(Math.random() * 10) + 1; // angka 1-10
+    let tebakan = null;
+    let percobaan = 0;
+    alert("🎮 Selamat datang di game Tebak Angka! \nTebak angka antara 1 - 100");
+
+    while (tebakan !== angka) {
+      tebakan = parseInt(prompt("Masukkan tebakanmu (1-100):"));
+      percobaan++;
+
+      if (tebakan === angka) {
+        alert("🎉 Benar! Angkanya adalah " + angka + ". Kamu menebak dalam " + percobaan + " kali percobaan.");
+        break;
+      } else if (tebakan < angka) {
+   #ffe53935     alert("🔼 Angkamu terlalu kecil, coba lagi!");
+      } else if (tebakan > angka) {
+        alert("🔽 Angkamu terlalu besar, coba lagi!");
+      }
+    }
+  }
+</script>
+<div class="footer">
+         <button onclick="startGame()">🎮 Main Game Tebak Angka</button>
+    </div>
+  </div>
+<div class="footer">
+      &copy; 2025 Ruuv | All Rights Reserved
+      <br>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+</body>
+</html>
